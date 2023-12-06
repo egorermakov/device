@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин «Девайс»</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="page__body">
     <header class="page__header page-header">
       <div class="page-header__container container">
         <nav class="page-hedaer__nav page-hedaer__nav--main">
           <a class="page-header__logo logo">
-            <img class="logo__img" src="img/logo.svg" width="145" height="36" alt="Интернет-магазин «Девайс»">
+            <img class="logo__img" src="img/logo.svg" width="145" height="36" alt="Девайс">
           </a>
 
           <div class="additional-menu">
@@ -43,8 +43,8 @@
       </div>
     </header>
 
-    <main class="page__main">
-      <header class="promo">
+    <main class="page__main page-main">
+      <header class="page-main__section promo">
         <div class="container">
           <h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
 
@@ -54,7 +54,7 @@
                 <img src="img/slider/slider-1.png" width="560" height="560">
               </div>
               <div class="slide__content">
-                <h3 class="slide__title">
+                <h3 class="page-main__title slide__title">
                   Порхает как бабочка, <br>
                   жалит как пчела!
                 </h3>
@@ -76,74 +76,76 @@
         </div>
       </header>
 
-      <section class="catalog-section">
+      <section class="page-main__section catalog-section">
         <div class="catalog-section__container container">
           <h2 class="visually-hidden">Список категорий каталога</h2>
 
-          <div class="catalog-section__list">
-            <div class="catalog-section__item">
-              <a class="catalog-section__link" href="">
-                <img class="catalog-section__img" src="" alt="">
+          <ul class="catalog-section__list">
+            <li class="catalog-section__item">
+              <a class="catalog-section__link catalog-section__link--vr" href="#">
                 <h3 class="catalog-section__title">Виртуальная реальность</h3>
               </a>
-            </div>
-            <div class="catalog-section__item">
-              <a class="catalog-section__link" href="">
-                <img class="catalog-section__img" src="" alt="">
-                <h3 class="catalog-section__title">Моноподы для селфи</h3>
+            </li>
+            <li class="catalog-section__item">
+              <a class="catalog-section__link catalog-section__link--monopod" href="#">
+                <h3 class="catalog-section__title">Моноподы<br> для селфи</h3>
               </a>
-            </div>
-            <div class="catalog-section__item">
-              <a class="catalog-section__link" href="">
-                <img class="catalog-section__img" src="" alt="">
+            </li>
+            <li class="catalog-section__item">
+              <a class="catalog-section__link catalog-section__link--action" href="#">
                 <h3 class="catalog-section__title">Экшн-камеры</h3>
               </a>
-            </div>
-            <div class="catalog-section__item">
-              <a class="catalog-section__link" href="">
-                <img class="catalog-section__img" src="" alt="">
+            </li>
+            <li class="catalog-section__item">
+              <a class="catalog-section__link catalog-section__link--fitness" href="#">
                 <h3 class="catalog-section__title">Фитнес-браслеты</h3>
               </a>
-            </div>
-            <div class="catalog-section__item">
-              <a  class="catalog-section__link"href="">
-                <img class="catalog-section__img" src="" alt="">
+            </li>
+            <li class="catalog-section__item">
+              <a  class="catalog-section__link catalog-section__link--watch" href="#">
                 <h3 class="catalog-section__title">Умные часы</h3>
               </a>
-            </div>
-            <div class="catalog-section__item">
-              <a  class="catalog-section__link"href="">
-                <img class="catalog-section__img" src="" alt="">
+            </li>
+            <li class="catalog-section__item">
+              <a  class="catalog-section__link catalog-section__link--quadcopter" href="#">
                 <h3 class="catalog-section__title">Квадрокоптеры</h3>
               </a>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="services">
+      <section class="page-main__section services">
         <div class="services__container container">
           <div class="services__nav">
-            <button class="services__link">Доставка</button>
-            <button class="services__link">Гарантия</button>
-            <button class="services__link">Кредит</button>
+            <div class="services__tab services__tab--active">
+              <button class="services__button button">Доставка</button>
+            </div>
+            <div class="services__tab">
+              <button class="services__button button">Гарантия</button>
+            </div>
+            <div class="services__tab">
+              <button class="services__button button">Кредит</button>
+            </div>
           </div>
-          <div class="services__content services__content--delivery services__content--active">
-            <h3 class="services__title">Доставка</h3>
+          <div id="delivery" class="services__content services__content--delivery services__content--active">
+            <h3 class="services__title page-main__title">Доставка</h3>
             <p class="services__text">
-              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+              Мы с удовольствием доставим ваш товар прямо <br>
+              к вашему подъезду совершенно бесплатно! Ведь <br>
+              мы неплохо заработаем, поднимая его на ваш этаж.
             </p>
           </div>
 
-          <div class="services__content services__content--warranty">
-            <h3 class="services__title">Гарантия</h3>
+          <div id="warranty" class="services__content services__content--warranty">
+            <h3 class="services__title page-main__title">Гарантия</h3>
             <p class="services__text">
               Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
             </p>
           </div>
 
-          <div class="services__content services__content--сredit">
-            <h3 class="services__title">Кредит</h3>
+          <div id="сredit" class="services__content services__content--сredit">
+            <h3 class="services__title page-main__title">Кредит</h3>
             <p class="services__text">
               Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
             </p>
@@ -151,64 +153,66 @@
         </div>
       </section>
 
-      <div class="delivery">
+      <div class="page-main__section delivery">
         <a class="delivery__container container" href="#">
           <p class="delivery__title">Доставим редкий товар под заказ</p>
         </a>
       </div>
 
-      <section class="info-section">
+      <section class="page-main__section info-section">
         <div class="info-section__container container">
-          <div class="about">
-            <h2>О нас</h2>
+          <div class="info-section__col">
+            <h2 class="info-section__title page-main__title">О нас</h2>
 
             <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
             <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
 
-            <ul>
-              <li>Меловые линии</li>
-              <li>СДИК</li>
-              <li>ТоксБерри</li>
+            <ul class="info-section__list">
+              <li class="info-section__item">Меловые линии</li>
+              <li class="info-section__item">СДИК</li>
+              <li class="info-section__item">ТоксБерри</li>
             </ul>
 
             <a href="#" class="button">Подробнее о нас</a>
           </div>
 
-          <div class="contacts">
-            <h2>Контакты</h2>
+          <div class="info-section__col">
+            <h2 class="info-section__title page-main__title">Контакты</h2>
             <p>
               Вы можете забрать товар сами, заехав в наш офис.<br>
               Заодно сможете проверить работоспособность покупки.
             </p>
 
-            <h3>Интернет-магазин «Девайс»</h3>
-            <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-            <a href="">+7 (812) 812-12-12</a>
+            <h3 class="info-section__subtitle">Интернет-магазин «Девайс»</h3>
+            <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.
+            <a href="">+7 (812) 812-12-12</a></p>
 
-            <h3>Время работы</h3>
+            <h3 class="info-section__subtitle">Время работы</h3>
             <p>
               пн—пт: с 10:00 до 22:00 <br>
               сб—вс: с 10:00 до 19:00
             </p>
+
+            <a href="#" class="button">Напишите нам</a>
           </div>
         </div>
 
       </section>
 
       <footer class="subscribe">
-        <div class="container">
+        <div class="subscribe__container container">
           <h2 class="visually-hidden">Рассылка</h2>
-          <p>Подпишитесь на рассылку</p>
-          <p>
+          <p class="page-main__title subscribe__title">Подпишитесь на рассылку</p>
+          <p class="subscribe__desc">
             Еженедельный дайджест с обзорами новинок,<br>
             длительными тест-драйвами, распаковками, а также акции, <br>
             спецпредложения и вот это вот всё.
           </p>
-          <form action="">
+          <form class="subscribe__email" action="">
             <input type="text" placeholder="Ваш e-mail">
             <button type="submit">Подписаться</button>
           </form>
-          <span class="legend">Это бесплатно</span>
+          <span class="subscribe__legend">Это бесплатно</span>
         </div>
 
       </footer>
