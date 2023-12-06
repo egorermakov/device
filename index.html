@@ -26,7 +26,7 @@
 
           <ul class="site-menu">
             <li class="site-menu__item site-menu__item--catalog">
-              <a class="site-menu__link" href="">Каталог товаров</a>
+              <button class="site-menu__link" href="">Каталог товаров</button>
             </li>
             <li class="site-menu__item">
               <a class="site-menu__link" href="">Доставка</a>
@@ -48,26 +48,37 @@
         <div class="container">
           <h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
 
-          <div class="slides">
-            <div class="slide slide-1">
-              <div class="slide__img">
-                <img src="img/slider/slider-1.png" width="560" height="560">
+          <div class="slider">
+            <div class="slider__container slider--active">
+              <div class="slider__picture">
+                <img class="slider__img" src="img/slider/slider-1.png" width="560" height="560">
+                <div class="slider__controls slider-controls">
+                  <button class="slider-controls__button slider-controls__button--prev" type="button">
+                    <span class="visually-hidden">Предыдущий товар</span>
+                  </button>
+                  <button class="slider-controls__button slider-controls__button--next" type="button">
+                    <span class="visually-hidden">Следующий товар</span>
+                  </button>
+                </div>
               </div>
-              <div class="slide__content">
-                <h3 class="page-main__title slide__title">
+              <div class="slider__content">
+                <h3 class="page-main__title slider__title">
                   Порхает как бабочка, <br>
                   жалит как пчела!
                 </h3>
-                <p class="slide__text">
+                <p class="slider__text">
                   Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
                 </p>
-                <a  class="slide__button button" href="#">Подробнее</a>
-                <dl class="slide__info">
-                  <dd>800 м</dd>
-                  <dt>Дальность полета</dt>
-
-                  <dd>50 м</dd>
-                  <dt>Радиус поражения</dt>
+                <a  class="slider__button button" href="#">Подробнее</a>
+                <dl class="slider__list">
+                  <div class="slider__item">
+                    <dd class="slider__value">800 м</dd>
+                    <dt class="slider__info">Дальность полета</dt>
+                  </div>
+                  <div class="slider__item">
+                    <dd class="slider__value">50 м</dd>
+                    <dt class="slider__info">Радиус поражения</dt>
+                  </div>
                 </dl>
               </div>
             </div>

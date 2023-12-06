@@ -104,7 +104,8 @@ a {
   position: absolute;
   height: 8px;
   width: 100%;
-  top: calc(50% - 4px);
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
   left: 0;
   background-color: var(--color-yellow-light);
@@ -123,6 +124,7 @@ a {
 
 .button:active {
   background-color: var(--color-yellow-dark);
+  outline: none;
 }
 
 .button--disabled {
@@ -238,18 +240,102 @@ a {
 
 /* promo */
 
-.slide {
+.slider {}
+
+.slider__container {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
 
-.slide__title {
+.slider__container::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 150px;
+  width: 100%;
+  background-color: var(--color-yellow-light);
+  z-index: -2;
+}
+
+.slider__picture {
+  position: relative;
+
+}
+
+.slider-controls {
+  position: absolute;
+  top: calc(50% - 45px);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-controls__button {
+  content: "";
+  padding: 30px;
+  width: 20px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.slider-controls__button--next {
+  background-image: url("../img/icons/arrow.jpg");
+  transform: rotate(180deg);
+}
+
+.slider-controls__button--prev {
+  background-image: url("../img/icons/arrow.jpg");
+}
+
+.slider__content {
+  margin: 0;
+  position: relative;
+}
+
+.slider__content::after {
+  content: "01";
+  position: absolute;
+  font-size: 180px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--color-white);
+  top: 10px;
+  right: 50px;
+  z-index: -1;
+}
+
+.slider__title {
+  margin-top: 120px;
   margin-bottom: 30px;
 }
 
-.slide__text {
+.slider__text {
+  margin-bottom: 50px;
+}
 
+.slider__list {
+  margin: 0;
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+.slider__value {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 36px;
+  color: var(--color-black);
+}
+
+.slider__info {
+  font-size: 16px;
 }
 
 /* catalog-categories */
@@ -487,7 +573,8 @@ a {
   display: block;
   position: absolute;
   left: 0;
-  top: calc(50% - 4px);
+  top: 50%;
+  transform: translateY(-50%);
   width: 8px;
   height: 8px;
   border-radius: 50%;
