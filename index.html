@@ -14,31 +14,48 @@
           </a>
 
           <div class="additional-menu">
-            <form class="additional-menu__search" method="post" action="https://echo.htmlacademy.ru/">
-              <input name="search" type="text" placeholder="Текст поиска">
-              <button type="submit">Найти</button>
-            </form>
-            <a class="additional-menu__link additional-menu__link--login" href="">Войти</a>
-            <a class="additional-menu__link additional-menu__link--compare" href="">Сравнить</a>
-            <a class="additional-menu__link additional-menu__link--cart" href="">Корзина</a>
-            </ul>
+            <div class="additional-menu__left">
+              <form class="additional-menu__search search" method="post" action="https://echo.htmlacademy.ru/">
+                <input class="search__input" name="search" type="text" placeholder="Текст поиска">
+                <button class="search__button" type="submit">Найти</button>
+                <svg class="search__icon" width="16" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="m15.7 14.69-3.1-3.1c.9-1.2 1.4-2.6 1.4-4.2 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7.39c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(0 .39)" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+              </form>
+
+              <a class="additional-menu__link" href="#">
+                <svg class="additional-menu__icon" width="16" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M1.5 12.39h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3 0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5c0 1.3.7 2.4 1.7 3-2.6.7-4.5 2.9-4.7 5.5Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(.5 .39)" d="M0 0h15v12H0z"/></clipPath></defs></svg>
+                <span>Войти</span>
+              </a>
+            </div>
+
+            <div class="additional-menu__right">
+              <a class="additional-menu__link" href="#">
+                <svg class="additional-menu__icon" width="10" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M6 .4H4v12h2V.4ZM2 4.4H0v8h2v-8ZM10 3.4H8v9h2v-9Z"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(0 .4)" d="M0 0h10v12H0z"/></clipPath></defs></svg>
+                <span>Сравнить</span>
+              </a>
+              <a class="additional-menu__link" href="">
+                <span class="additional-menu__counter">2</span>
+                <svg class="additional-menu__icon" width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="m15.3 5.36-3.5.2L8.6.66c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.26l2.2 3.2H5.9L8 2.26Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(0 .36)" d="M0 0h16v14H0z"/></clipPath></defs></svg>
+
+                <span>Корзина</span>
+              </a>
+            </div>
           </div>
 
-          <ul class="site-menu">
-            <li class="site-menu__item site-menu__item--catalog">
-              <button class="site-menu__link" href="">Каталог товаров</button>
-            </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="">Доставка</a>
-            </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="">Гарантия</a>
-            </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="">Контакты</a>
-            </li>
-          </ul>
+          <div class="site-menu">
+            <button class="site-menu__button" type="button">Каталог товаров</button>
 
+            <ul class="site-menu__list">
+              <li class="site-menu__item">
+                <a class="site-menu__link" href="">Доставка</a>
+              </li>
+              <li class="site-menu__item">
+                <a class="site-menu__link" href="">Гарантия</a>
+              </li>
+              <li class="site-menu__item">
+                <a class="site-menu__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -47,41 +64,52 @@
       <header class="page-main__section promo">
         <div class="container">
           <h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
-
           <div class="slider">
-            <div class="slider__container slider--active">
-              <div class="slider__picture">
-                <img class="slider__img" src="img/slider/slider-1.png" width="560" height="560">
-                <div class="slider__controls slider-controls">
-                  <button class="slider-controls__button slider-controls__button--prev" type="button">
-                    <span class="visually-hidden">Предыдущий товар</span>
-                  </button>
-                  <button class="slider-controls__button slider-controls__button--next" type="button">
-                    <span class="visually-hidden">Следующий товар</span>
-                  </button>
-                </div>
-              </div>
-              <div class="slider__content">
-                <h3 class="page-main__title slider__title">
+
+            <div class="slider__item slide slide--current">
+              <img class="slide__img" src="img/slider/slider-1.png" width="560" height="560">
+              <div class="slide__content">
+                <h3 class="page-main__title slide__title">
                   Порхает как бабочка, <br>
                   жалит как пчела!
                 </h3>
-                <p class="slider__text">
+                <p class="slide__text">
                   Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
                 </p>
-                <a  class="slider__button button" href="#">Подробнее</a>
-                <dl class="slider__list">
-                  <div class="slider__item">
-                    <dd class="slider__value">800 м</dd>
-                    <dt class="slider__info">Дальность полета</dt>
+                <a  class="slide__button button" href="#">Подробнее</a>
+                <dl class="slide__list">
+                  <div class="slide__item">
+                    <dd class="slide__value">800 м</dd>
+                    <dt class="slide__info">Дальность полета</dt>
                   </div>
-                  <div class="slider__item">
-                    <dd class="slider__value">50 м</dd>
-                    <dt class="slider__info">Радиус поражения</dt>
+                  <div class="slide__item">
+                    <dd class="slide__value">50 м</dd>
+                    <dt class="slide__info">Радиус поражения</dt>
                   </div>
                 </dl>
               </div>
             </div>
+
+            <div class="slider__controls slider-controls">
+              <button class="slider-controls__button slider-controls__button--prev" type="button">
+                <span class="visually-hidden">Предыдущий товар</span>
+              </button>
+              <button class="slider-controls__button slider-controls__button--next" type="button">
+                <span class="visually-hidden">Следующий товар</span>
+              </button>
+            </div>
+
+            <ol class="slider__pagination slider-pagination">
+              <li class="slider-pagination__item">
+                <button class="slider-pagination__button slider-pagination__button--current" type="button"></button>
+              </li>
+              <li class="slider-pagination__item">
+                <button class="slider-pagination__button" type="button"></button>
+              </li>
+              <li class="slider-pagination__item">
+                <button class="slider-pagination__button" type="button"></button>
+              </li>
+            </ol>
 
           </div>
         </div>
@@ -220,10 +248,13 @@
             спецпредложения и вот это вот всё.
           </p>
           <form class="subscribe__email" action="">
-            <input type="text" placeholder="Ваш e-mail">
-            <button type="submit">Подписаться</button>
+            <input class="subscribe__input" type="text" placeholder="Ваш e-mail">
+            <button class="subscribe__button button button-secondary" type="submit">Подписаться</button>
           </form>
-          <span class="subscribe__legend">Это бесплатно</span>
+          <div class="subscribe__legend">
+            <svg width="16" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.5 1-9.6 9.3L1.5 6v4.7L6 15l9.5-9.3V1Z" fill="#08AF00"/></svg>
+            <span>Это бесплатно</span>
+          </div>
         </div>
 
       </footer>
@@ -256,16 +287,19 @@
             <li class="social__item">
               <a class="social__link" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Facebook</span>
+                <svg width="9" height="19" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 3.36H9v-3H5.6C2.8.36 2 2.06 2 4.56v1.8H0v3h2v9h3v-9h3.3l.6-3H5v-1.5c0-.8.3-1.5 1.5-1.5Z" fill="currentColor"/><defs><clipPath id="a"><path fill="#fff" transform="rotate(180 4.5 9.18)" d="M0 0h9v18H0z"/></clipPath></defs></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://www.instagram.com/htmlacademy/">
                 <span class="visually-hidden">Instagram</span>
+                <svg width="16" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M8 10.36a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M14.7 1.66c-.9-.9-2-1.3-3.4-1.3H4.7C1.9.36 0 2.26 0 5.06v6.6c0 1.4.4 2.6 1.4 3.4.9.9 2 1.3 3.3 1.3h6.6c1.4 0 2.6-.4 3.4-1.3.8-.9 1.3-2 1.3-3.4v-6.6c0-1.4-.4-2.6-1.3-3.4ZM8 12.46c-2.2 0-4.1-1.8-4.1-4.1s1.9-4.1 4.1-4.1c2.2 0 4.1 1.8 4.1 4.1s-1.9 4.1-4.1 4.1Zm4.6-7.4c-.7 0-1.3-.5-1.3-1.3s.5-1.3 1.3-1.3c.7 0 1.3.6 1.3 1.3 0 .7-.6 1.3-1.3 1.3Z"/></g></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Twitter</span>
+                <svg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M10.35.51c1.6-.5 2.77.3 3.41 1.1.53-.2 1.17-.4 1.81-.6a2 2 0 0 1-.85 1.6c.75.2 1.28-.4 1.28-.4-.1.9-.96 1.69-1.5 1.89-.2 6.27-2.98 10.35-9.49 10.26H4.6c-.32 0-3.95-.4-4.59-1.8 2.13.2 3.63-.4 4.37-1.1-.85-.3-2.56-.4-2.77-2.78.32.2.53.3 1.17.2C1.6 8.08.32 7.38.43 5.39c.32.3.96.5 1.28.4-.64-.2-1.92-3.09-.86-4.58 1.71 1.7 3.52 3.38 6.72 3.48C7.8 2.6 8.64 1.21 10.35.51Z" fill="currentColor"/></g></svg>
               </a>
             </li>
           </ul>

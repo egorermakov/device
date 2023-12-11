@@ -7,43 +7,64 @@
   </head>
   <body class="page__body">
     <header class="page__header page-header">
-      <div class="page-header__container container">
+      <div class="page-header__container page-header__container--inner container">
         <nav class="page-hedaer__nav page-hedaer__nav--main">
-          <a class="page-header__logo logo" href="index.html">
+          <a class="page-header__logo logo" href="/index.html">
             <img class="logo__img" src="img/logo.svg" width="145" height="36" alt="Девайс">
           </a>
 
           <div class="additional-menu">
-            <form class="additional-menu__search" method="post" action="https://echo.htmlacademy.ru/">
-              <input name="search" type="text" placeholder="Текст поиска">
-              <button type="submit">Найти</button>
-            </form>
-            <a class="additional-menu__link additional-menu__link--login" href="">Войти</a>
-            <a class="additional-menu__link additional-menu__link--compare" href="">Сравнить</a>
-            <a class="additional-menu__link additional-menu__link--cart" href="">Корзина</a>
-            </ul>
+            <div class="additional-menu__left">
+              <form class="additional-menu__search search" method="post" action="https://echo.htmlacademy.ru/">
+                <input class="search__input" name="search" type="text" placeholder="Текст поиска">
+                <button class="search__button" type="submit">Найти</button>
+                <svg class="search__icon" width="16" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="m15.7 14.69-3.1-3.1c.9-1.2 1.4-2.6 1.4-4.2 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7.39c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(0 .39)" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+              </form>
+
+              <a class="additional-menu__link" href="">
+                <span>Коля Петухов</span>
+              </a>
+
+              <a class="additional-menu__link" href="#">
+                <svg class="additional-menu__icon" width="16" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M1.5 12.39h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3 0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5c0 1.3.7 2.4 1.7 3-2.6.7-4.5 2.9-4.7 5.5Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(.5 .39)" d="M0 0h15v12H0z"/></clipPath></defs></svg>
+                <span>Войти</span>
+              </a>
+            </div>
+
+            <div class="additional-menu__right">
+              <a class="additional-menu__link" href="#">
+                <svg class="additional-menu__icon" width="10" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M6 .4H4v12h2V.4ZM2 4.4H0v8h2v-8ZM10 3.4H8v9h2v-9Z"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(0 .4)" d="M0 0h10v12H0z"/></clipPath></defs></svg>
+                <span>Сравнить</span>
+              </a>
+              <a class="additional-menu__link" href="">
+                <span class="additional-menu__counter">2</span>
+                <svg class="additional-menu__icon" width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="m15.3 5.36-3.5.2L8.6.66c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.26l2.2 3.2H5.9L8 2.26Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(0 .36)" d="M0 0h16v14H0z"/></clipPath></defs></svg>
+
+                <span>Корзина</span>
+              </a>
+            </div>
           </div>
 
-          <ul class="site-menu">
-            <li class="site-menu__item site-menu__item--catalog">
-              <a class="site-menu__link" href="">Каталог товаров</a>
-            </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="">Доставка</a>
-            </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="">Гарантия</a>
-            </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="">Контакты</a>
-            </li>
-          </ul>
+          <div class="site-menu">
+            <button class="site-menu__button" type="button">Каталог товаров</button>
 
+            <ul class="site-menu__list">
+              <li class="site-menu__item">
+                <a class="site-menu__link" href="">Доставка</a>
+              </li>
+              <li class="site-menu__item">
+                <a class="site-menu__link" href="">Гарантия</a>
+              </li>
+              <li class="site-menu__item">
+                <a class="site-menu__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
 
-    <main class="page__main  page-main">
+    <main class="page__main page-main">
       <header class="page-main__header container">
         <h1 class="page-main__title">Моноподы для селфи</h1>
 
@@ -67,15 +88,15 @@
           <form class="catalog__filter catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <p class="catalog__title">Фильтр:</p>
 
-            <fieldset>
-              <legend>Стоимость</legend>
+            <fieldset class="catalog-filter__group">
+              <legend class="catalog-filter__title">Стоимость</legend>
               <div class="range">
                 <div class="range__scale">
                   <div class="range__bar" style="left: 42px; width: 136px">
-                    <button class="range__toggle toggle--min" type="button">
+                    <button class="range__toggle range__toggle--min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
-                    <button class="range__toggle toggle--max" type="button">
+                    <button class="range__toggle range__toggle--max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
                   </div>
@@ -92,46 +113,46 @@
               </div>
             </fieldset>
 
-            <fieldset>
-              <legend>Цвет</legend>
-              <ul>
-                <li>
-                  <label class="">
-                    <input type="checkbox" name="" id="" checked>
-                    <span>Черный</span>
+            <fieldset class="catalog-filter__group">
+              <legend class="catalog-filter__title">Цвет</legend>
+              <ul class="catalog-filter__list">
+                <li class="catalog-filter__item">
+                  <label class="control">
+                    <input class="control__input" type="checkbox" name="" id="" checked>
+                    <span class="control__lead">Черный</span>
                   </label>
                 </li>
-                <li>
-                  <label class="">
-                    <input type="checkbox" name="" id="" checked>
-                    <span>Белый</span>
+                <li class="catalog-filter__item">
+                  <label class="control">
+                    <input class="control__input" type="checkbox" name="" id="" checked>
+                    <span class="control__lead">Белый</span>
                   </label>
                 </li>
-                <li>
-                  <label class="">
-                    <input type="checkbox" name="" id="">
-                    <span>Синий</span>
+                <li class="catalog-filter__item">
+                  <label class="control">
+                    <input class="control__input" type="checkbox" name="" id="">
+                    <span class="control__lead">Синий</span>
                   </label>
                 </li>
-                <li>
-                  <label class="">
-                    <input type="checkbox" name="" id="">
+                <li class="catalog-filter__item">
+                  <label class="control">
+                    <input class="control__input" type="checkbox" name="" id="">
                     <span>Красный</span>
-                  </label>
+                  </label class="control__lead">
                 </li>
-                <li>
-                  <label class="">
-                    <input type="checkbox" name="" id="">
+                <li class="catalog-filter__item">
+                  <label class="control">
+                    <input class="control__input" type="checkbox" name="" id="">
                     <span>Розовый</span>
-                  </label>
+                  </label class="control__lead">
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset>
-              <legend>Bluetooth</legend>
+            <fieldset class="catalog-filter__group">
+              <legend class="catalog-filter__title">Bluetooth</legend>
 
-              <ul>
+              <ul class="catalog-filter__list">
                 <li>
                   <label class="">
                     <input type="radio" name="bluetooth" value="yes" checked>
@@ -147,7 +168,7 @@
               </ul>
             </fieldset>
 
-            <button type="submit">Показать</button>
+            <button class="button" type="submit">Показать</button>
           </form>
 
           <div class="catalog__right-column">
@@ -155,8 +176,8 @@
               <h3 class="visually-hidden">Сортировка и отображение</h3>
               <p class="catalog__title">Cортировка:</p>
 
-              <form class="catalog__select"  action="https://echo.htmlacademy.ru/" method="get">
-                <select class="" id="sorting">
+              <form class="catalog__select select"  action="https://echo.htmlacademy.ru/" method="get">
+                <select class="select__control" id="sorting">
                   <option value="popular">Популярное</option>
                   <option value="cheap">Дешёвое</option>
                   <option value="expensive">Дорогое</option>
@@ -165,7 +186,7 @@
               </form>
 
               <ul class="catalog__order order">
-                <li class="order__item order__item--active">
+                <li class="order__item">
                   <a class="order__link order__link--increasing">
                     <span class="visually-hidden">По возрастанию</span>
                   </a>
@@ -181,25 +202,28 @@
             <div class="catalog__list catalog-list">
               <h2 class="visually-hidden">Список продукции</h2>
 
-              <article class="catalog-list__item card">
-                <a href="card__link" href="#">
-                  <div class="card__picture">
-                    <div class="card__label"></div>
-                    <img class="card__img" src="img/catalog/1.jpg" width="360" height="380" alt="">
-                    <a class="card__button button" href="">Подробнее</a>
-                  </div>
+                  <article class="catalog-list__item card">
+                    <a class="card__link" href="#">
+                      <div class="card__picture">
+                        <div class="card__label"></div>
+                        <img class="card__img" src="img/catalog/1.jpg" width="360" height="380" alt="">
+                        <div class="card__button button" href="">Подробнее</div>
+                      </div>
 
-                  <h3 class="card__title">Любительская селфи-палка</h3>
-                  <span class="card__price">500 ₽</span>
-                </a>
-              </article>
+                      <h3 class="card__title">Любительская селфи-палка</h3>
+                      <span class="card__price">500 ₽</span>
+
+                    </a>
+                  </article>
+
+
 
               <article class="catalog-list__item card">
-                <a href="card__link" href="#">
+                <a class="card__link" href="#">
                   <div class="card__picture">
                     <div class="card__label"></div>
                     <img class="card__img" src="img/catalog/2.jpg" width="360" height="380" alt="">
-                    <a class="card__button button" href="">Подробнее</a>
+                    <div class="card__button button" href="">Подробнее</div>
                   </div>
 
                   <h3 class="card__title">Профессиональная селфи-палка</h3>
@@ -208,11 +232,11 @@
               </article>
 
               <article class="catalog-list__item card">
-                <a href="card__link" href="#">
+                <a class="card__link" href="#">
                   <div class="card__picture">
                     <div class="card__label"></div>
                     <img class="card__img" src="img/catalog/3.jpg" width="360" height="380" alt="">
-                    <a class="card__button button" href="">Подробнее</a>
+                    <div class="card__button button" href="">Подробнее</div>
                   </div>
 
                   <h3 class="card__title">Непотопляемая селфи-палка</h3>
@@ -221,11 +245,11 @@
               </article>
 
               <article class="catalog-list__item card">
-                <a href="card__link" href="#">
+                <a class="card__link" href="#">
                   <div class="card__picture">
                     <div class="card__label"></div>
                     <img class="card__img" src="img/catalog/4.jpg" width="360" height="380" alt="">
-                    <a class="card__button button" href="">Подробнее</a>
+                    <div class="card__button button" href="">Подробнее</div>
                   </div>
 
                   <h3 class="card__title">Селфи-палка «Следуй за мной»</h3>
@@ -236,10 +260,10 @@
 
             <div class="catalog__pagination pagination">
 
-              <button class="pagination-button button button--large" type="button">Загрузить ещё</button>
+              <button class="pagination__button button button-secondary button--large" type="button">Загрузить ещё</button>
 
               <div class="pagination__nav">
-                <button class="pagination_button button"  type="button">
+                <button class="pagination__button button"  type="button">
                   Назад
                 </button>
 
@@ -261,7 +285,7 @@
                   </li>
                 </ul>
 
-                <button class="pagination_button button" type="button">
+                <button class="pagination__button button" type="button">
                   Вперед
                 </button>
               </div>
@@ -271,7 +295,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="page-footer">
@@ -301,16 +324,19 @@
             <li class="social__item">
               <a class="social__link" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Facebook</span>
+                <svg width="9" height="19" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 3.36H9v-3H5.6C2.8.36 2 2.06 2 4.56v1.8H0v3h2v9h3v-9h3.3l.6-3H5v-1.5c0-.8.3-1.5 1.5-1.5Z" fill="currentColor"/><defs><clipPath id="a"><path fill="#fff" transform="rotate(180 4.5 9.18)" d="M0 0h9v18H0z"/></clipPath></defs></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://www.instagram.com/htmlacademy/">
                 <span class="visually-hidden">Instagram</span>
+                <svg width="16" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M8 10.36a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M14.7 1.66c-.9-.9-2-1.3-3.4-1.3H4.7C1.9.36 0 2.26 0 5.06v6.6c0 1.4.4 2.6 1.4 3.4.9.9 2 1.3 3.3 1.3h6.6c1.4 0 2.6-.4 3.4-1.3.8-.9 1.3-2 1.3-3.4v-6.6c0-1.4-.4-2.6-1.3-3.4ZM8 12.46c-2.2 0-4.1-1.8-4.1-4.1s1.9-4.1 4.1-4.1c2.2 0 4.1 1.8 4.1 4.1s-1.9 4.1-4.1 4.1Zm4.6-7.4c-.7 0-1.3-.5-1.3-1.3s.5-1.3 1.3-1.3c.7 0 1.3.6 1.3 1.3 0 .7-.6 1.3-1.3 1.3Z"/></g></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Twitter</span>
+                <svg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M10.35.51c1.6-.5 2.77.3 3.41 1.1.53-.2 1.17-.4 1.81-.6a2 2 0 0 1-.85 1.6c.75.2 1.28-.4 1.28-.4-.1.9-.96 1.69-1.5 1.89-.2 6.27-2.98 10.35-9.49 10.26H4.6c-.32 0-3.95-.4-4.59-1.8 2.13.2 3.63-.4 4.37-1.1-.85-.3-2.56-.4-2.77-2.78.32.2.53.3 1.17.2C1.6 8.08.32 7.38.43 5.39c.32.3.96.5 1.28.4-.64-.2-1.92-3.09-.86-4.58 1.71 1.7 3.52 3.38 6.72 3.48C7.8 2.6 8.64 1.21 10.35.51Z" fill="currentColor"/></g></svg>
               </a>
             </li>
           </ul>
