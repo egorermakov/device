@@ -1,6 +1,6 @@
 # Личный проект «Device»
 
-* Студент: [Егор Ермаков]([userProfile](https://htmlacademy.ru/profile/egorermakov)).
+* Студент: [Егор Ермаков]([(https://htmlacademy.ru/profile/egorermakov)]).
 
 ---
 
